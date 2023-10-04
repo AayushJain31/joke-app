@@ -1,0 +1,114 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: rgb(233, 247, 254);
+}
+
+.border-top {
+    border-top: .13rem solid rgb(0, 98, 227) !important;
+}
+
+.section {
+    background-color: #fff;
+    padding: 3rem 1.5rem;
+}
+
+.level {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.level-left {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.level-right {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.level-left, .level-right {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.level-item {
+    display: inline-flex;    
+}
+
+.btn-style {
+    background: rgb(0, 98, 227);
+    color: rgb(255, 255, 255);
+    border: 2px solid transparent;
+    text-decoration: none;
+    height: 2.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+a.btn-style {
+    margin-left: 1rem;
+    top: 0.2rem;
+    position: relative;
+}
+
+.btn-style:hover {
+    background: rgb(0, 127, 227);
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    color: #4a4a4a;
+}
+
+.card {
+    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.subtitle {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.25;
+    word-break: break-word;
+}
+
+.accordion-body {
+    border: 1px solid #e2e2e2;
+    background: rgb(255, 236, 232);
+}
+
+.accordion-header button {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.accordion-button {
+    background: #FED141 !important;
+    color: rgb(0, 98, 227) !important;
+}

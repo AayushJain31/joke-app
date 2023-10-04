@@ -1,0 +1,99 @@
+﻿@model IList<JokeModel>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Jokes (Length less than 10 words)
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse" aria-labelledby="flush-headingOne">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        @foreach (var jokeResult in Model.Where(item => item.Length == 'S'))
+                        {
+                            <li class="list-group-item">@Html.Raw(jokeResult.Joke)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Jokes (Length between 10 words and 20 words)
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse" aria-labelledby="flush-headingTwo">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        @foreach (var jokeResult in Model.Where(item => item.Length == 'M'))
+                        {
+                            <li class="list-group-item">@Html.Raw(jokeResult.Joke)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Jokes (Length greater than or equal to 20 words)
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse" aria-labelledby="flush-headingThree">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        @foreach (var jokeResult in Model.Where(item => item.Length == 'L'))
+                        {
+                            <li class="list-group-item">@Html.Raw(jokeResult.Joke)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- 
+<div class="content">
+    @if (Model != null && Model.Count > 0)
+    {
+        <div>Jokes (Length less than 10 words)</div>
+        @foreach (var jokeResult in Model.Where(item => item.Length == 'S'))
+        {
+            <div class="card">
+                <div class="card-content">
+                    <p class="subtitle">@Html.Raw(jokeResult.Joke)</p>
+                </div>
+            </div>
+        }
+
+        <div>Jokes (Length between 10 words and 20 words)</div>
+        @foreach (var jokeResult in Model.Where(item => item.Length == 'M'))
+        {
+            <div class="card">
+                <div class="card-content">
+                    <p class="subtitle">@Html.Raw(jokeResult.Joke)</p>
+                </div>
+            </div>
+        }
+
+        <div>Jokes (Length greater than or equal to 20 words)</div>
+        @foreach (var jokeResult in Model.Where(item => item.Length == 'L'))
+        {
+            <div class="card">
+                <div class="card-content">
+                    <p class="subtitle">@Html.Raw(jokeResult.Joke)</p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No joke(s) found. Please try again using another search.</p>
+    }
+</div>
+-->

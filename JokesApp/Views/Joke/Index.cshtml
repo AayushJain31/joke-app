@@ -1,0 +1,72 @@
+﻿@model JokeModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="section">
+
+    <div class="container">
+        <div class="level">
+            <div class="level-left">
+                <div class="content level-item">
+                    <h2 class="ml-2">Dad Joke of the Day:</h2>
+
+                    <a class="button btn-style" id="generateJoke" href="/">
+                        <span>New Joke</span>
+                    </a>
+                </div>
+            </div>
+            <div class="level-right">
+                
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search terms..." aria-label="Search terms..." aria-describedby="searchJoke" id="searchParam">
+                    <div class="input-group-append">
+                        <span class="input-group-text btn-style" id="searchJoke">Search Joke</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="content">
+            @if (Model != null)
+            {
+                <div class="card">
+                    <div class="card-content">
+                        <p class="subtitle">@Html.Raw(Model.Joke)</p>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <p>No joke(s) found. Please try again by click on the <strong>New Joke</strong> button.</p>
+            }
+        </div>
+
+        <div id="displaySearchJokes" class="mt-3">
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#searchJoke").on("click", function() {
+            let searchParam = $("#searchParam").val();
+            $.ajax({
+                url: "/Joke/SearchJokes",
+                type: "GET",
+                data: {
+                    searchParam : searchParam
+                },
+                success: function (data) {
+                    $("#displaySearchJokes").html(data);
+                    //console.log(data);
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX request failed with status:", status);
+                }
+            });
+        });
+    });
+</script>

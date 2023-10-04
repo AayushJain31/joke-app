@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "LOxGEuv39Rsg3GQ0SQxMCB5rAJ1M+noijRkEVgZk0dazuvwvaYaJZVkKQoszNBJdHwDYhx2RGdmWil+cPg8IQQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jainaa2\\source\\repos\\JokesApp\\JokesApp\\JokesApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jainaa2\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Jainaa2\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\Jainaa2\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jainaa2\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jainaa2\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
